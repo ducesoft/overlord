@@ -3,7 +3,7 @@ package chunk
 import (
 	"net"
 
-	"overlord/pkg/log"
+	"github.com/ducesoft/overlord/pkg/log"
 )
 
 // ValidateIPAddress check if given hostname is a valid ipaddress

@@ -10,9 +10,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"overlord/pkg/log"
-	"overlord/platform/api/model"
-	"overlord/version"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/platform/api/model"
+	"github.com/ducesoft/overlord/version"
 )
 
 func main() {

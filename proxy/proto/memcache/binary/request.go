@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"overlord/proxy/proto"
+	"github.com/ducesoft/overlord/proxy/proto"
 )
 
 const (

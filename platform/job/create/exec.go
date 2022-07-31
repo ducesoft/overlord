@@ -15,12 +15,12 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"overlord/pkg/container"
-	"overlord/pkg/dir"
-	"overlord/pkg/etcd"
-	"overlord/pkg/log"
-	"overlord/pkg/proc"
-	"overlord/pkg/types"
+	"github.com/ducesoft/overlord/pkg/container"
+	"github.com/ducesoft/overlord/pkg/dir"
+	"github.com/ducesoft/overlord/pkg/etcd"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/pkg/proc"
+	"github.com/ducesoft/overlord/pkg/types"
 
 	"github.com/BurntSushi/toml"
 	"github.com/gofrs/flock"

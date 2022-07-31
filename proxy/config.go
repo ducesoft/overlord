@@ -7,11 +7,10 @@ import (
 	"strconv"
 	"strings"
 
-	"overlord/pkg/log"
-	"overlord/pkg/types"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/pkg/types"
 
 	"github.com/BurntSushi/toml"
-	"github.com/Pallinder/go-randomdata"
 	"github.com/pkg/errors"
 )
 

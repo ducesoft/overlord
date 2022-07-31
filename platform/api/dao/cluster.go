@@ -9,12 +9,12 @@ import (
 	"strconv"
 	"strings"
 
-	"overlord/pkg/etcd"
-	"overlord/pkg/log"
-	"overlord/pkg/types"
-	"overlord/platform/api/model"
-	"overlord/platform/job"
-	"overlord/platform/job/create"
+	"github.com/ducesoft/overlord/pkg/etcd"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/platform/api/model"
+	"github.com/ducesoft/overlord/platform/job"
+	"github.com/ducesoft/overlord/platform/job/create"
 
 	"go.etcd.io/etcd/client"
 )

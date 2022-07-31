@@ -3,8 +3,8 @@ package redis
 import (
 	"bytes"
 	"fmt"
-	"overlord/pkg/bufio"
-	"overlord/pkg/conv"
+	"github.com/ducesoft/overlord/pkg/bufio"
+	"github.com/ducesoft/overlord/pkg/conv"
 	"strconv"
 )
 

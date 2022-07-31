@@ -4,10 +4,10 @@ import (
 	"flag"
 	"strings"
 
-	"overlord/pkg/etcd"
-	"overlord/pkg/log"
-	"overlord/platform/job/balance"
-	"overlord/version"
+	"github.com/ducesoft/overlord/pkg/etcd"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/platform/job/balance"
+	"github.com/ducesoft/overlord/version"
 )
 
 var (

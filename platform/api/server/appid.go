@@ -3,7 +3,7 @@ package server
 import (
 	"net/http"
 
-	"overlord/platform/api/model"
+	"github.com/ducesoft/overlord/platform/api/model"
 
 	"github.com/gin-gonic/gin"
 )

@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"overlord/platform/chunk"
-	"overlord/pkg/etcd"
-	"overlord/pkg/log"
-	"overlord/pkg/myredis"
-	"overlord/platform/job/create"
+	"github.com/ducesoft/overlord/pkg/etcd"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/pkg/myredis"
+	"github.com/ducesoft/overlord/platform/chunk"
+	"github.com/ducesoft/overlord/platform/job/create"
 
 	"go.etcd.io/etcd/client"
 )

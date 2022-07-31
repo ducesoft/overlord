@@ -5,8 +5,8 @@ import (
 	"github.com/gomodule/redigo/redis"
 	"github.com/stretchr/testify/assert"
 
-	"overlord/pkg/types"
-	"overlord/proxy"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/proxy"
 
 	"bufio"
 	"bytes"
@@ -141,7 +141,7 @@ var ccs = []*proxy.ClusterConfig{
 		WriteTimeout:     1000,
 		PingFailLimit:    3,
 		PingAutoEject:    false,
-		Servers:          []string{
+		Servers: []string{
 			//"127.0.0.1:6379:10",
 			// "127.0.0.1:11212:10",
 			// "127.0.0.1:11213:10",

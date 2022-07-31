@@ -4,9 +4,9 @@ import (
 	"context"
 	"flag"
 
-	"overlord/pkg/log"
-	"overlord/platform/mesos"
-	"overlord/version"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/platform/mesos"
+	"github.com/ducesoft/overlord/version"
 )
 
 func main() {

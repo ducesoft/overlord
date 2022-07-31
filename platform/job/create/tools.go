@@ -2,8 +2,8 @@ package create
 
 import (
 	"context"
-	"overlord/pkg/etcd"
 	"fmt"
+	"github.com/ducesoft/overlord/pkg/etcd"
 )
 
 func cleanEtcdDirtyDir(ctx context.Context, e *etcd.Etcd, instance string) error {

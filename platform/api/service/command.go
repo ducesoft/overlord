@@ -1,6 +1,6 @@
 package service
 
-import "overlord/pkg/myredis"
+import "github.com/ducesoft/overlord/pkg/myredis"
 
 // Execute command into the given addr
 func (s *Service) Execute(addr string, cmd string, arg ...string) (*myredis.Command, error) {

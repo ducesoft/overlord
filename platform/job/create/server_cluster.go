@@ -7,9 +7,9 @@ import (
 	"strings"
 	"text/template"
 
-	"overlord/pkg/etcd"
-	"overlord/pkg/log"
-	"overlord/platform/chunk"
+	"github.com/ducesoft/overlord/pkg/etcd"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/platform/chunk"
 )
 
 // maybe global defines

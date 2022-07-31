@@ -3,8 +3,8 @@ package memcache
 import (
 	errs "errors"
 	"fmt"
-	"overlord/pkg/types"
-	"overlord/proxy/proto"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/proxy/proto"
 	"sync"
 )
 

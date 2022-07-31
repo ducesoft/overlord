@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"overlord/pkg/log"
+	"github.com/ducesoft/overlord/pkg/log"
 )
 
 // define useful command

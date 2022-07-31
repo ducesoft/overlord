@@ -1,9 +1,9 @@
 package server
 
 import (
-	"overlord/pkg/log"
-	"overlord/platform/api/model"
-	"overlord/platform/api/service"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/platform/api/model"
+	"github.com/ducesoft/overlord/platform/api/service"
 
 	"github.com/gin-gonic/gin"
 )

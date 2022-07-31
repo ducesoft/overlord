@@ -6,9 +6,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"overlord/pkg/bufio"
-	libnet "overlord/pkg/net"
-	"overlord/proxy/proto"
+	"github.com/ducesoft/overlord/pkg/bufio"
+	libnet "github.com/ducesoft/overlord/pkg/net"
+	"github.com/ducesoft/overlord/proxy/proto"
 
 	"github.com/pkg/errors"
 )

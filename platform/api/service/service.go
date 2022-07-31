@@ -1,9 +1,9 @@
 package service
 
 import (
-	"overlord/pkg/myredis"
-	"overlord/platform/api/dao"
-	"overlord/platform/api/model"
+	"github.com/ducesoft/overlord/pkg/myredis"
+	"github.com/ducesoft/overlord/platform/api/dao"
+	"github.com/ducesoft/overlord/platform/api/model"
 )
 
 // New create new service of overlord
@@ -19,7 +19,7 @@ func New(cfg *model.ServerConfig) *Service {
 
 // Service is the struct for api server
 type Service struct {
-	d      *dao.Dao
+	d *dao.Dao
 	client *myredis.Client
 	cfg    *model.ServerConfig
 }

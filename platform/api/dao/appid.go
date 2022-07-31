@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"overlord/pkg/etcd"
-	"overlord/platform/api/model"
+	"github.com/ducesoft/overlord/pkg/etcd"
+	"github.com/ducesoft/overlord/platform/api/model"
 
 	"go.etcd.io/etcd/client"
 )

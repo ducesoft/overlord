@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	"overlord/pkg/bufio"
-	libnet "overlord/pkg/net"
-	"overlord/pkg/types"
-	"overlord/proxy/proto"
+	"github.com/ducesoft/overlord/pkg/bufio"
+	libnet "github.com/ducesoft/overlord/pkg/net"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/proxy/proto"
 
 	"github.com/pkg/errors"
 )

@@ -4,9 +4,9 @@ import (
 	"reflect"
 	"testing"
 
-	"overlord/pkg/bufio"
-	"overlord/proxy/proto"
-	"overlord/proxy/proto/redis"
+	"github.com/ducesoft/overlord/pkg/bufio"
+	"github.com/ducesoft/overlord/proxy/proto"
+	"github.com/ducesoft/overlord/proxy/proto/redis"
 
 	"github.com/bouk/monkey"
 	"github.com/pkg/errors"

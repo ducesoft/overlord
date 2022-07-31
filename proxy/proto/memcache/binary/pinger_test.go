@@ -1,12 +1,12 @@
 package binary
 
 import (
-	"overlord/pkg/mockconn"
+	"github.com/ducesoft/overlord/pkg/mockconn"
 	"testing"
 	"time"
 
-	"overlord/pkg/bufio"
-	libcon "overlord/pkg/net"
+	"github.com/ducesoft/overlord/pkg/bufio"
+	libcon "github.com/ducesoft/overlord/pkg/net"
 
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"

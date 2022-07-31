@@ -1,7 +1,7 @@
 package main
 
 import (
-	"overlord/enri"
+	"github.com/ducesoft/overlord/enri"
 )
 
 func main() {

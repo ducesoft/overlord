@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"strconv"
 
-	"overlord/pkg/bufio"
-	"overlord/pkg/conv"
-	libnet "overlord/pkg/net"
-	"overlord/pkg/types"
-	"overlord/proxy/proto"
+	"github.com/ducesoft/overlord/pkg/bufio"
+	"github.com/ducesoft/overlord/pkg/conv"
+	libnet "github.com/ducesoft/overlord/pkg/net"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/proxy/proto"
 
 	"github.com/pkg/errors"
 )

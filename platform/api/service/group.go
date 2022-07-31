@@ -1,6 +1,6 @@
 package service
 
-import "overlord/platform/api/model"
+import "github.com/ducesoft/overlord/platform/api/model"
 
 // GetAllGroups will load groups from file path
 func (s *Service) GetAllGroups() []*model.Group {

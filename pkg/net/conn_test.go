@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"overlord/pkg/mockconn"
+	"github.com/ducesoft/overlord/pkg/mockconn"
 
 	"github.com/stretchr/testify/assert"
 )

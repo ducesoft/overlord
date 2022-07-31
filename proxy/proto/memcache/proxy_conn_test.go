@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"overlord/pkg/mockconn"
-	libcon "overlord/pkg/net"
-	"overlord/pkg/types"
-	"overlord/proxy/proto"
+	"github.com/ducesoft/overlord/pkg/mockconn"
+	libcon "github.com/ducesoft/overlord/pkg/net"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/proxy/proto"
 
 	"github.com/stretchr/testify/assert"
 )

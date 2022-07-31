@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"overlord/pkg/mockconn"
-	libnet "overlord/pkg/net"
+	"github.com/ducesoft/overlord/pkg/mockconn"
+	libnet "github.com/ducesoft/overlord/pkg/net"
 
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"

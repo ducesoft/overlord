@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"overlord/pkg/etcd"
-	"overlord/pkg/types"
-	"overlord/platform/api/model"
-	"overlord/platform/job"
+	"github.com/ducesoft/overlord/pkg/etcd"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/platform/api/model"
+	"github.com/ducesoft/overlord/platform/job"
 )
 
 // SetInstanceWeight will change the given instance weight
@@ -42,9 +42,9 @@ func (d *Dao) RestartInstance(ctx context.Context, cname, addr string) (string, 
 
 func (d *Dao) createResartInstance(c *model.Cluster, addr string) *job.Job {
 	j := &job.Job{
-		Cluster:   c.Name,
-		Nodes:     []string{addr},
-		OpType:    job.OpRestart,
+		Cluster: c.Name,
+		Nodes:   []string{addr},
+		OpType:  job.OpRestart,
 		Group:     c.Group,
 		CacheType: types.CacheType(c.CacheType),
 	}

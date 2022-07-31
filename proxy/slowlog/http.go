@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"overlord/proxy/proto"
+	"github.com/ducesoft/overlord/proxy/proto"
 )
 
 // showlog will show slowlog to http

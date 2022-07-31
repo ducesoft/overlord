@@ -1,11 +1,11 @@
 package create
 
 import (
+	"github.com/ducesoft/overlord/pkg/etcd"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/platform/chunk"
 	"math/rand"
 	"os"
-	"overlord/platform/chunk"
-	"overlord/pkg/etcd"
-	"overlord/pkg/types"
 	"testing"
 	"time"
 

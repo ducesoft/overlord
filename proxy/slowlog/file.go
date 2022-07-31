@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"overlord/pkg/log"
-	"overlord/proxy/proto"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/proxy/proto"
 )
 
 const byteSpace = byte(' ')

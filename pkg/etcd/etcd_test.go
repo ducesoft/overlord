@@ -3,10 +3,10 @@ package etcd
 import (
 	"context"
 	"encoding/json"
-	"overlord/pkg/types"
+	"github.com/ducesoft/overlord/pkg/types"
 	"testing"
 
-	"overlord/platform/job"
+	"github.com/ducesoft/overlord/platform/job"
 
 	"github.com/stretchr/testify/assert"
 )

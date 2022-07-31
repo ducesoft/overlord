@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"overlord/pkg/log"
+	"github.com/ducesoft/overlord/pkg/log"
 )
 
 var (

@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"overlord/pkg/types"
+	"github.com/ducesoft/overlord/pkg/types"
 )
 
 var (

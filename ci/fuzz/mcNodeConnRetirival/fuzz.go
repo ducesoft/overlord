@@ -1,8 +1,8 @@
 package mcNodeConnRetrival
 
 import (
-	"overlord/proxy/proto"
-	"overlord/proxy/proto/memcache"
+	"github.com/ducesoft/overlord/proxy/proto"
+	"github.com/ducesoft/overlord/proxy/proto/memcache"
 )
 
 func Fuzz(data []byte) int {

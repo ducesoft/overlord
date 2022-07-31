@@ -2,7 +2,7 @@ package cluster
 
 import (
 	errs "errors"
-	"overlord/pkg/log"
+	"github.com/ducesoft/overlord/pkg/log"
 	"strconv"
 	"strings"
 )

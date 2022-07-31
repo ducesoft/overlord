@@ -1,9 +1,9 @@
 package server
 
 import (
+	"github.com/ducesoft/overlord/platform/api/model"
+	"github.com/ducesoft/overlord/platform/job"
 	"net/http"
-	"overlord/platform/api/model"
-	"overlord/platform/job"
 
 	"github.com/gin-gonic/gin"
 )

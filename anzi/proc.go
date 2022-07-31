@@ -13,10 +13,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"overlord/pkg/conv"
-	"overlord/pkg/log"
-	"overlord/pkg/types"
-	"overlord/proxy"
+	"github.com/ducesoft/overlord/pkg/conv"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/proxy"
 )
 
 const (

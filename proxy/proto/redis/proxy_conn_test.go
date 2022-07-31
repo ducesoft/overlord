@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"overlord/pkg/mockconn"
-	libnet "overlord/pkg/net"
-	"overlord/proxy/proto"
+	"github.com/ducesoft/overlord/pkg/mockconn"
+	libnet "github.com/ducesoft/overlord/pkg/net"
+	"github.com/ducesoft/overlord/proxy/proto"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -1,8 +1,8 @@
 package dao
 
 import (
-	"overlord/pkg/etcd"
-	"overlord/platform/api/model"
+	"github.com/ducesoft/overlord/pkg/etcd"
+	"github.com/ducesoft/overlord/platform/api/model"
 )
 
 // New create new dao layer

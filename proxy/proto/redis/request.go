@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"sync"
 
-	"overlord/pkg/types"
-	"overlord/proxy/proto"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/proxy/proto"
 )
 
 var (

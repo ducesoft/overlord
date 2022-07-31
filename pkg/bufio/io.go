@@ -6,7 +6,7 @@ import (
 	"io"
 	"net"
 
-	libnet "overlord/pkg/net"
+	libnet "github.com/ducesoft/overlord/pkg/net"
 )
 
 var (

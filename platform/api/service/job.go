@@ -6,11 +6,11 @@ import (
 	"strings"
 	"time"
 
-	"overlord/pkg/log"
-	"overlord/pkg/types"
-	"overlord/platform/api/model"
-	"overlord/platform/job"
-	"overlord/platform/job/balance"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/platform/api/model"
+	"github.com/ducesoft/overlord/platform/job"
+	"github.com/ducesoft/overlord/platform/job/balance"
 )
 
 // GetJob will get job by given jobID string

@@ -1,8 +1,8 @@
 package create
 
 import (
-	"overlord/pkg/types"
-	"overlord/platform/chunk"
+	"github.com/ducesoft/overlord/pkg/types"
+	"github.com/ducesoft/overlord/platform/chunk"
 )
 
 // CacheInfo is the server side create cache info.

@@ -2,7 +2,7 @@ package service
 
 import (
 	"context"
-	"overlord/platform/api/model"
+	"github.com/ducesoft/overlord/platform/api/model"
 )
 
 // CreateCluster will create new cluster

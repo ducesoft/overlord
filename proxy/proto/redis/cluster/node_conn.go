@@ -5,10 +5,10 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"overlord/pkg/conv"
-	"overlord/pkg/log"
-	"overlord/proxy/proto"
-	"overlord/proxy/proto/redis"
+	"github.com/ducesoft/overlord/pkg/conv"
+	"github.com/ducesoft/overlord/pkg/log"
+	"github.com/ducesoft/overlord/proxy/proto"
+	"github.com/ducesoft/overlord/proxy/proto/redis"
 
 	"github.com/pkg/errors"
 )

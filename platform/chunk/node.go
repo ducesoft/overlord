@@ -2,7 +2,7 @@ package chunk
 
 import (
 	"fmt"
-	"overlord/pkg/log"
+	"github.com/ducesoft/overlord/pkg/log"
 	"strings"
 )
 
