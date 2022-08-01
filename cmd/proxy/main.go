@@ -11,7 +11,6 @@ import (
 	"syscall"
 
 	"github.com/ducesoft/overlord/pkg/log"
-	"github.com/ducesoft/overlord/pkg/prom"
 	"github.com/ducesoft/overlord/proxy"
 	"github.com/ducesoft/overlord/proxy/slowlog"
 	"github.com/ducesoft/overlord/version"
@@ -93,13 +92,7 @@ func main() {
 	// pprof
 	if c.Stat != "" {
 		go http.ListenAndServe(c.Stat, nil)
-		if c.Proxy.UseMetrics {
-			prom.Init()
-		} else {
-			prom.On = false
-		}
 	}
-	prom.VersionState(version.Str())
 	// hanlde signal
 	signalHandler()
 }

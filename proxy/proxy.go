@@ -11,7 +11,6 @@ import (
 
 	"github.com/ducesoft/overlord/pkg/log"
 	libnet "github.com/ducesoft/overlord/pkg/net"
-	"github.com/ducesoft/overlord/pkg/prom"
 	"github.com/ducesoft/overlord/pkg/types"
 	"github.com/ducesoft/overlord/proxy/proto"
 	"github.com/ducesoft/overlord/proxy/proto/memcache"
@@ -172,7 +171,6 @@ func (p *Proxy) MonitorConfChange(ccf string) {
 				time.Sleep(time.Second)
 				newConfs, err := LoadClusterConf(p.ccf)
 				if err != nil {
-					prom.ErrIncr(p.ccf, p.ccf, "config reload", err.Error())
 					log.Errorf("failed to load conf file:%s and got error:%v", p.ccf, err)
 					continue
 				}
@@ -181,7 +179,6 @@ func (p *Proxy) MonitorConfChange(ccf string) {
 					if err = p.updateConfig(conf); err == nil {
 						log.Infof("reload successful cluster:%s config succeed", conf.Name)
 					} else {
-						prom.ErrIncr(conf.Name, conf.Name, "cluster reload", err.Error())
 						log.Errorf("reload failed cluster:%s config and get error:%v", conf.Name, err)
 					}
 				}

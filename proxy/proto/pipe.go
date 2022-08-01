@@ -2,12 +2,9 @@ package proto
 
 import (
 	"errors"
-	"github.com/ducesoft/overlord/pkg/prom"
+	"github.com/ducesoft/overlord/pkg/hashkit"
 	"sync"
 	"sync/atomic"
-	"time"
-
-	"github.com/ducesoft/overlord/pkg/hashkit"
 )
 
 const (
@@ -179,18 +176,7 @@ func (mp *msgPipe) pipe() {
 		for i := 0; i < mp.count; i++ {
 			msg := mp.batch[i]
 			msg.WithError(err) // NOTE: maybe err is nil
-			if prom.On {
-				cmd := msg.Request().CmdString()
-				duration := msg.RemoteDur()
-				msg.Done()
-				if err != nil {
-					prom.ErrIncr(nc.Cluster(), nc.Addr(), cmd, "network err")
-				} else {
-					prom.HandleTime(nc.Cluster(), nc.Addr(), cmd, int64(duration/time.Microsecond))
-				}
-			} else {
-				msg.Done()
-			}
+			msg.Done()
 		}
 		mp.count = 0
 		if err != nil {

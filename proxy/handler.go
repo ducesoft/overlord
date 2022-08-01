@@ -9,7 +9,6 @@ import (
 
 	"github.com/ducesoft/overlord/pkg/log"
 	libnet "github.com/ducesoft/overlord/pkg/net"
-	"github.com/ducesoft/overlord/pkg/prom"
 	"github.com/ducesoft/overlord/pkg/types"
 	"github.com/ducesoft/overlord/proxy/proto"
 	"github.com/ducesoft/overlord/proxy/proto/memcache"
@@ -77,7 +76,6 @@ func NewHandler(p *Proxy, cc *ClusterConfig, conn net.Conn, forwarder proto.Forw
 	default:
 		panic(types.ErrNoSupportCacheType)
 	}
-	prom.ConnIncr(cc.Name)
 	return
 }
 
@@ -113,9 +111,6 @@ func (h *Handler) handle() {
 				return
 			}
 			msg.MarkEnd()
-			if prom.On {
-				prom.ProxyTime(h.cc.Name, msg.Request().CmdString(), int64(msg.TotalDur()/time.Microsecond))
-			}
 		}
 		if err = h.pc.Flush(); err != nil {
 			h.deferHandle(messages, err)
@@ -170,9 +165,6 @@ func (h *Handler) closeWithError(err error) {
 		atomic.AddInt32(&h.p.conns, -1) // NOTE: decr!!!
 		if err == proto.ErrQuit {
 			return
-		}
-		if prom.On {
-			prom.ConnDecr(h.cc.Name)
 		}
 		if log.V(2) && errors.Cause(err) != io.EOF {
 			log.Warnf("cluster(%s) addr(%s) remoteAddr(%s) handler close error:%+v", h.cc.Name, h.cc.ListenAddr, h.conn.RemoteAddr(), err)

@@ -8,7 +8,7 @@ import (
 	"github.com/ducesoft/overlord/proxy/proto"
 	"github.com/ducesoft/overlord/proxy/proto/redis"
 
-	"github.com/bouk/monkey"
+	"bou.ke/monkey"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 )

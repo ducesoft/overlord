@@ -13,7 +13,6 @@ import (
 	"github.com/ducesoft/overlord/pkg/hashkit"
 	"github.com/ducesoft/overlord/pkg/log"
 	libnet "github.com/ducesoft/overlord/pkg/net"
-	"github.com/ducesoft/overlord/pkg/prom"
 	"github.com/ducesoft/overlord/pkg/types"
 	"github.com/ducesoft/overlord/proxy/proto"
 	"github.com/ducesoft/overlord/proxy/proto/memcache"
@@ -338,9 +337,6 @@ func (c *connections) processPing(p *pinger) {
 				continue
 			} else {
 				_ = p.ping.Close()
-				if prom.On {
-					prom.ErrIncr(c.cc.Name, p.addr, "ping", "network err")
-				}
 			}
 
 			p.failure++
@@ -354,9 +350,6 @@ func (c *connections) processPing(p *pinger) {
 			}
 			if !del {
 				c.ring.DelNode(p.alias)
-				if prom.On {
-					prom.ErrIncr(c.cc.Name, p.addr, "ping", "del node")
-				}
 				del = true
 				if log.V(2) {
 					log.Errorf("ping node:%s addr:%s fail times:%d ge to limit:%d then del", p.alias, p.addr, p.failure, c.cc.PingFailLimit)
