@@ -174,9 +174,9 @@ func (p *Proxy) MonitorConfChange(ccf string) {
 					log.Errorf("failed to load conf file:%s and got error:%v", p.ccf, err)
 					continue
 				}
-				changed := parseChanged(newConfs, p.ccs)
+				changed := ParseChanged(newConfs, p.ccs)
 				for _, conf := range changed {
-					if err = p.updateConfig(conf); err == nil {
+					if err = p.UpdateConfig(conf); err == nil {
 						log.Infof("reload successful cluster:%s config succeed", conf.Name)
 					} else {
 						log.Errorf("reload failed cluster:%s config and get error:%v", conf.Name, err)
@@ -195,7 +195,7 @@ func (p *Proxy) MonitorConfChange(ccf string) {
 	}
 }
 
-func (p *Proxy) updateConfig(conf *ClusterConfig) (err error) {
+func (p *Proxy) UpdateConfig(conf *ClusterConfig) (err error) {
 	p.lock.Lock()
 	defer p.lock.Unlock()
 	f, ok := p.forwarders[conf.Name]
@@ -218,7 +218,7 @@ func (p *Proxy) updateConfig(conf *ClusterConfig) (err error) {
 	return
 }
 
-func parseChanged(newConfs, oldConfs []*ClusterConfig) (changed []*ClusterConfig) {
+func ParseChanged(newConfs, oldConfs []*ClusterConfig) (changed []*ClusterConfig) {
 
 	changed = make([]*ClusterConfig, 0, len(oldConfs))
 	for _, cf := range newConfs {
