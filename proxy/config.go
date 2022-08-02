@@ -197,6 +197,16 @@ func (ccs *ClusterConfigs) LoadFromFile(reader io.Reader) error {
 	return nil
 }
 
+// LoadClusterConfWithPath load cluster config.
+func LoadClusterConfWithPath(path string) (ccs []*ClusterConfig, err error) {
+	fd, err := os.Open(path)
+	if nil != err {
+		return
+	}
+	defer fd.Close()
+	return LoadClusterConf(fd)
+}
+
 // LoadClusterConf load cluster config.
 func LoadClusterConf(reader io.Reader) (ccs []*ClusterConfig, err error) {
 	cs := &ClusterConfigs{}

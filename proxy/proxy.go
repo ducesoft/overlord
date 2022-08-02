@@ -169,7 +169,7 @@ func (p *Proxy) MonitorConfChange(ccf string) {
 		case ev := <-watch.Events:
 			if ev.Op&fsnotify.Create == fsnotify.Create || ev.Op&fsnotify.Write == fsnotify.Write || ev.Op&fsnotify.Rename == fsnotify.Rename {
 				time.Sleep(time.Second)
-				newConfs, err := LoadClusterConf(p.ccf)
+				newConfs, err := LoadClusterConfWithPath(p.ccf)
 				if err != nil {
 					log.Errorf("failed to load conf file:%s and got error:%v", p.ccf, err)
 					continue
