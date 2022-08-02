@@ -3,6 +3,7 @@ package proxy
 import (
 	errs "errors"
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 	"strings"
@@ -170,10 +171,10 @@ type ClusterConfigs struct {
 }
 
 // LoadFromFile load from file.
-func (ccs *ClusterConfigs) LoadFromFile(path string) error {
-	_, err := toml.DecodeFile(path, ccs)
+func (ccs *ClusterConfigs) LoadFromFile(reader io.Reader) error {
+	_, err := toml.NewDecoder(reader).Decode(ccs)
 	if err != nil {
-		return errors.Wrapf(err, "Load From File:%s", path)
+		return err
 	}
 	for _, cc := range ccs.Clusters {
 		cc.SetDefault()
@@ -197,9 +198,9 @@ func (ccs *ClusterConfigs) LoadFromFile(path string) error {
 }
 
 // LoadClusterConf load cluster config.
-func LoadClusterConf(path string) (ccs []*ClusterConfig, err error) {
+func LoadClusterConf(reader io.Reader) (ccs []*ClusterConfig, err error) {
 	cs := &ClusterConfigs{}
-	if err = cs.LoadFromFile(path); err != nil {
+	if err = cs.LoadFromFile(reader); err != nil {
 		return
 	}
 	checks := map[string]struct{}{}
