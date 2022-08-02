@@ -1,23 +1,8 @@
 package log
 
 import (
-	"flag"
 	"fmt"
 )
-
-var (
-	logStd  bool
-	logFile string
-	logVl   int
-	debug   bool
-)
-
-func init() {
-	flag.BoolVar(&logStd, "std", false, "log will printing into stdout.")
-	flag.BoolVar(&debug, "debug", false, "debug model, will open stdout log. high priority than conf.debug.")
-	flag.StringVar(&logFile, "log", "", "log will printing file {log}. high priority than conf.log.")
-	flag.IntVar(&logVl, "log-vl", 0, "log verbose level. high priority than conf.log_vl.")
-}
 
 // Level of severity.
 type Level int
@@ -61,14 +46,6 @@ func Init(c *Config) (b bool) {
 	if c == nil {
 		c = &Config{}
 	}
-	if logFile != "" {
-		c.Log = logFile
-	}
-	if logVl != 0 {
-		c.LogVL = logVl
-	}
-	c.Stdout = logStd
-	c.Debug = debug
 	if c.Debug || c.Stdout {
 		hs = append(hs, NewStdHandler())
 	}
